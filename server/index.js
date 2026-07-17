@@ -20,16 +20,20 @@ app.listen(PORT, () => {
 });
 
 const productRoutes = require('./routes/productRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 app.use('/api/products', productRoutes);
+app.use('/api/products', reviewRoutes);
 
 const cartRoutes = require('./routes/cartRoutes');
 
 app.use('/api/cart', cartRoutes);
 
 const orderRoutes = require('./routes/orderRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 
 app.use('/api/orders', orderRoutes);
+app.use('/api/payment', paymentRoutes);
 
 
 

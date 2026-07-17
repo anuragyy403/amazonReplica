@@ -13,6 +13,7 @@ function Navbar() {
           <>
             <Link to="/orders">Orders</Link>
             <span>Hi, {user.name}</span>
+            {user.role === 'admin' && <Link to="/admin/add-product">Add Product</Link>}
             <button onClick={logout}>Logout</button>
           </>
         ) : (

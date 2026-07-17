@@ -29,7 +29,7 @@ function PaymentForm({ orderId }) {
     }
 
     if (paymentIntent && paymentIntent.status === 'succeeded') {
-      await API.post('/payment/confirm', { orderId });
+      await API.post('/payment/confirm', { orderId, paymentIntentId: paymentIntent.id });
       navigate('/orders');
     }
 
